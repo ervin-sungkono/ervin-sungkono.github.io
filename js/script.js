@@ -17,15 +17,15 @@ function _queryAll(query){
 // Read-Only Access Token
 const accessToken = '273d8e87548ed5a17b05187f3969a76791322220257baa82c2e204b53ec1ad73';
 
-jribbble.setToken(accessToken);
-jribbble.shots(function(shotsArray){
-    shotsArray = shotsArray.slice(0,5);
-    setTimeout(()=>{
+fetch(`https://api.dribbble.com/v2/user/shots?access_token=${accessToken}`)
+    .then((response) => response.json())
+    .then((shots) => {
+        const shotsArray = shots.slice(0,5);
         _query('#dribbble-section .container .dribbble-shots').innerHTML = shotsArray.reduce(function(html, shot) {
             return html + ('<div class="shot"><a href="' +  shot.html_url + '" target="_blank"><img src="' + shot.images.normal + '"><div class="overlay"><h3>'+ shot.title +'</h3></div></a></div>');
         }, "");
-    },500);  
-});
+    })
+    .catch((error) => console.log(error));
 
 //Fade In Animation on Scroll
 let scrollElements = _queryAll('.fade');

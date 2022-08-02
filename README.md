@@ -5,6 +5,6 @@ Website that i built using HTML,CSS, and JS to showcase my projects and designs.
 1. Direction Aware Card Hover
 2. Scroll Events
 3. Responsive Layout
-4. Dribbble API using Jribbble
+4. Dribbble API to show data
 
 [Click here](https://ervin-sungkono.github.io) to see the website!

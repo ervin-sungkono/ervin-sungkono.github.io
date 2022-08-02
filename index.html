@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ervin Cahyadinata Sungkono</title>
+    
+    <link rel="icon" href="./assets/logo-website.png" type="image/png">
+
+    <meta name="title" content="Ervin Cahyadinata Sungkono">
+    <meta name="description" content="Hello! im known as Ervin Cahyadinata Sungkono, a student at Binus University who has a passion for Web Development and Design. This is my personal website where i put my past projects and designs.">
+    <meta name="image" content="https://ervin-sungkono.github.io/assets/preview-img.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ervin-sungkono.github.io/">
+    <meta property="og:title" content="Ervin Cahyadinata Sungkono">
+    <meta property="og:description" content="Hello! im known as Ervin Cahyadinata Sungkono, a student at Binus University who has a passion for Web Development and Design. This is my personal website where i put my past projects and designs.">
+    <meta property="og:image" content="https://ervin-sungkono.github.io/assets/preview-img.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ervin-sungkono.github.io/">
+    <meta property="twitter:title" content="Ervin Cahyadinata Sungkono">
+    <meta property="twitter:description" content="Hello! im known as Ervin Cahyadinata Sungkono, a student at Binus University who has a passion for Web Development and Design. This is my personal website where i put my past projects and designs.">
+    <meta property="twitter:image" content="https://ervin-sungkono.github.io/assets/preview-img.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+</head>
+<body>
+    <div id="rotate-message">
+        <img src="./assets/rotate-alert-img.png" alt="Rotate Alert">
+        <p>Please Rotate Your Device!</p>
+    </div>
+    <nav id="navbar">
+        <div class="container">
+            <a id="nav-logo" onclick="window.location.reload()">
+                <img src="./assets/logo-image.png" alt="Logo Ervin">
+            </a>
+            <div class="nav-list">
+                <div class="nav-menu">
+                    <a class="nav-link active" onclick="scrollToView('hero-section')">Home</a>
+                    <a class="nav-link" onclick="scrollToView('about-section')">About</a>
+                    <a class="nav-link" onclick="scrollToView('dribbble-section')">Dribbble</a>
+                    <a class="nav-link" onclick="scrollToView('github-section')">GitHub</a>
+                </div>
+                <a href="mailto:ervinsung@gmail.com" class="secondary-btn contact-btn">Contact</a>
+            </div>
+            <div id="hamburger-btn" onclick="toggleHamburgerActive()">
+                <div class="wrapper">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="hero-section">
+        <div class="container">
+            <div class="hero-content fade fade-in">
+                <div class="heading-text">
+                    <p>Hello, my name is</p>
+                    <div class="heading-name">
+                        <h1 id="heading-typewriter" class="absolute"><span></span></h1>
+                        <h1 id="name-text">Ervin Cahyadinata<br>Sungkono</h1>
+                    </div>
+                    <p>Web Developer & Designer</p>
+                </div>
+                <a href="#" class="primary-btn cv-btn disabled">
+                    <p>See My CV</p>
+                </a>
+            </div>
+            <div class="social-media-links fade fade-in">
+                <div class="social-media">
+                    <a href="https://www.instagram.com/ervin.cs_09/" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9968 7.9983C9.79333 7.9983 7.99515 9.79651 7.99515 12C7.99515 14.2035 9.79333 16.0017 11.9968 16.0017C14.2002 16.0017 15.9984 14.2035 15.9984 12C15.9984 9.79651 14.2002 7.9983 11.9968 7.9983ZM23.9987 12C23.9987 10.3429 24.0137 8.70077 23.9206 7.04665C23.8275 5.12536 23.3893 3.4202 21.9843 2.01525C20.5764 0.607302 18.8743 0.172009 16.953 0.0789456C15.2959 -0.0141172 13.6539 0.000892936 11.9998 0.000892936C10.3427 0.000892936 8.70061 -0.0141172 7.04652 0.0789456C5.12526 0.172009 3.42014 0.610305 2.01522 2.01525C0.607291 3.42321 0.172005 5.12536 0.0789442 7.04665C-0.014117 8.70377 0.000892919 10.3459 0.000892919 12C0.000892919 13.6541 -0.014117 15.2992 0.0789442 16.9533C0.172005 18.8746 0.610293 20.5798 2.01522 21.9847C3.42314 23.3927 5.12526 23.828 7.04652 23.9211C8.70361 24.0141 10.3457 23.9991 11.9998 23.9991C13.6569 23.9991 15.2989 24.0141 16.953 23.9211C18.8743 23.828 20.5794 23.3897 21.9843 21.9847C23.3923 20.5768 23.8275 18.8746 23.9206 16.9533C24.0167 15.2992 23.9987 13.6571 23.9987 12V12ZM11.9968 18.1572C8.58954 18.1572 5.83973 15.4073 5.83973 12C5.83973 8.5927 8.58954 5.84284 11.9968 5.84284C15.404 5.84284 18.1538 8.5927 18.1538 12C18.1538 15.4073 15.404 18.1572 11.9968 18.1572ZM18.406 7.02864C17.6105 7.02864 16.968 6.38621 16.968 5.59067C16.968 4.79513 17.6105 4.1527 18.406 4.1527C19.2015 4.1527 19.8439 4.79513 19.8439 5.59067C19.8442 5.77957 19.8071 5.96667 19.735 6.14124C19.6628 6.31581 19.5569 6.47442 19.4233 6.608C19.2897 6.74157 19.1311 6.84748 18.9565 6.91967C18.782 6.99185 18.5949 7.02888 18.406 7.02864V7.02864Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/ervin-cahyadinata-sungkono-970a691b6/" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.9148 8.3628H13.3716V10.5828C14.0136 9.306 15.66 8.1588 18.1332 8.1588C22.8744 8.1588 24 10.7004 24 15.3636V24H19.2V16.4256C19.2 13.77 18.558 12.2724 16.9236 12.2724C14.6568 12.2724 13.7148 13.8864 13.7148 16.4244V24H8.9148V8.3628ZM0.684 23.796H5.484V8.1588H0.684V23.796ZM6.1716 3.06C6.17178 3.46233 6.09199 3.86068 5.93686 4.2319C5.78174 4.60313 5.55438 4.93982 5.268 5.2224C4.68768 5.79915 3.90217 6.12198 3.084 6.12C2.26727 6.11945 1.48357 5.79744 0.9024 5.2236C0.617054 4.94006 0.390463 4.60299 0.235612 4.23172C0.0807618 3.86045 0.000694958 3.46227 0 3.06C0 2.2476 0.324 1.47 0.9036 0.8964C1.48426 0.32179 2.26829 -0.000359053 3.0852 3.00317e-07C3.9036 3.00317e-07 4.6884 0.3228 5.268 0.8964C5.8464 1.47 6.1716 2.2476 6.1716 3.06Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="social-media">
+                    <a href="https://dribbble.com/ErvinCS" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_627_523)">
+                            <path d="M6.4704 1.34717C4.805 2.2126 3.36555 3.45622 2.26746 4.97831C1.16938 6.5004 0.443216 8.25861 0.1472 10.112H0.8432C5.3312 10.008 8.8496 9.61917 11.7232 8.73917C10.4752 6.52637 8.952 4.35517 7.1248 2.14717L7.1232 2.14557L6.4704 1.34717V1.34717ZM0.0032 11.712L0 12C0 15.2272 1.2736 18.1568 3.3456 20.3136L3.6032 19.7952C3.61751 19.7665 3.63354 19.7387 3.6512 19.712C6.304 15.6768 9.3056 13.2768 12.6624 12.2C12.8896 12.1264 13.12 12.0592 13.3504 11.9984C13.0816 11.3822 12.7951 10.774 12.4912 10.1744C9.3472 11.1872 5.568 11.6032 0.8704 11.7104H0.0048L0.0032 11.712Z" fill="white"/>
+                            <path d="M4.57599 21.4288C6.69008 23.0982 9.30624 24.0043 12 24C13.4288 24 14.8 23.7504 16.0688 23.2928V22.1408C15.6784 19.0448 14.992 16.2048 13.96 13.4944C13.688 13.5616 13.4176 13.6384 13.1504 13.7232C10.2352 14.6592 7.51039 16.768 5.01439 20.552L4.57759 21.4288H4.57599ZM17.6688 22.5792C19.2155 21.7493 20.5616 20.5907 21.6125 19.1848C22.6635 17.7789 23.3937 16.1599 23.752 14.4416L22.848 14.0336C20.2464 13.2688 17.8224 12.9552 15.5632 13.2096C16.584 15.9616 17.2704 18.8512 17.6624 21.9904C17.6672 22.0224 17.6688 22.0544 17.6688 22.0896V22.5792V22.5792ZM23.9744 12.7872C24.1856 9.64431 23.1477 6.54507 21.0864 4.16321L20.6112 4.68961C18.7392 6.96641 16.6016 8.54561 14.0032 9.62081C14.3424 10.2992 14.6592 10.9824 14.952 11.6752C17.6272 11.2912 20.44 11.6528 23.3536 12.5152C23.3891 12.5256 23.4239 12.5384 23.4576 12.5536L23.9744 12.7872V12.7872ZM19.9616 3.02081C17.7684 1.07083 14.9347 -0.00436257 12 1.33044e-05C10.5952 1.33044e-05 9.24799 0.240013 7.99519 0.684813L8.35999 1.12961C10.312 3.48641 11.9312 5.81601 13.2528 8.19841C15.7216 7.20161 17.6784 5.74401 19.3872 3.65921C19.395 3.64942 19.403 3.63982 19.4112 3.63041L19.9616 3.02241V3.02081Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_627_523">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/profile-image.png" alt="Gambar Ervin" class="fade fade-in">
+            </div>
+            <div class="arrow-btn">
+                <a onclick="scrollToView('about-section')">
+                    <img src="./assets/arrow-btn.svg" alt="Arrow Down">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>About me</h2>
+                <div class="hr"></div>
+                <p class="fade">Hello! im a student at Binus University who has a passion for Web Development and Design. This is my personal website where i put my past projects and designs.</p>
+            </div>
+        </div>
+    </section>
+    <section id="dribbble-section">
+        <div class="container">
+            <h2>Latest Dribbble shots!</h2>
+            <div class="hr"></div>
+            <div class="dribbble-shots">
+                <div class="shot loading"></div>
+                <div class="shot loading"></div>
+                <div class="shot loading"></div>
+                <div class="shot loading"></div>
+                <div class="shot loading"></div>
+            </div>
+            <a class="primary-btn more-btn fade" onclick="toggleShotsView(this)">
+                <p>See More</p>
+            </a>
+        </div>
+    </section>
+    <section id="github-section">
+        <div class="container">
+            <h2>GitHub Projects</h2>
+            <div class="hr"></div>
+            <!-- <div class="github-projects">
+                <div class="project">
+
+                </div>
+            </div> -->
+            <div id="coming-soon" class="gradient-border fade">
+                <div class="content">
+                    <div class="text">
+                        <h3>Coming Soon</h3>
+                        <p>This section is under development, check again later! Meanwhile, click the button below to check my GitHub!</p>
+                    </div>
+                    <a class="primary-btn github-btn" href="https://github.com/ervin-sungkono" target="_blank">
+                        <p>GitHub</p>
+                        <img src="./assets/github-btn.svg" alt="GitHub Logo">
+                    </a>
+                </div>
+                <img src="./assets/404-image.png" alt="404 Image">
+            </div>
+        </div>
+    </section>
+    <footer id="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <h2>Contact Me</h2>
+                <div class="hr"></div>
+                <a href="mailto:ervinsung@gmail.com" class="secondary-btn">ervinsung@gmail.com</a>
+            </div>
+            <p>Copyright © Ervin Cahyadinata Sungkono 2022</p>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script src="./node_modules/jribbble/dist/jribbble.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

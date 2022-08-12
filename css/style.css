@@ -627,6 +627,7 @@ h1,h2,h3,a,p{
 }
 
 #github-section .container .github-projects{
+    max-width: 958px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

@@ -14,16 +14,57 @@ function _queryAll(query){
     return document.querySelectorAll(query);
 }
 
-// Read-Only Access Token
+// Dribbble API fetch to get shot lists for authenticated user
 const accessToken = '273d8e87548ed5a17b05187f3969a76791322220257baa82c2e204b53ec1ad73';
-
 fetch(`https://api.dribbble.com/v2/user/shots?access_token=${accessToken}`)
     .then((response) => response.json())
     .then((shots) => {
         const shotsArray = shots.slice(0,5);
         _query('#dribbble-section .container .dribbble-shots').innerHTML = shotsArray.reduce(function(html, shot) {
-            return html + ('<div class="shot"><a href="' +  shot.html_url + '" target="_blank"><img src="' + shot.images.normal + '"><div class="overlay"><h3>'+ shot.title +'</h3></div></a></div>');
+            return html + (`
+            <div class="shot fade">
+                <a href="${shot.html_url}" target="_blank">
+                    <img src="${shot.images.normal}">
+                    <div class="overlay">
+                    <h3>${shot.title}</h3>
+                    </div>
+                </a>
+            </div>`);
         }, "");
+    })
+    .catch((error) => console.log(error));
+
+// Github API fetch starred repos for selected username
+const githubUsername = 'ervin-sungkono';
+fetch(`https://api.github.com/users/${githubUsername}/starred`)
+    .then((response) => response.json())
+    .then((projects) => {
+        const filteredProjects = projects.filter((project) => project.owner.login === githubUsername && project.forks_count >= 0);
+        _query('#github-section .container .github-projects').innerHTML = filteredProjects.reduce(function(html, project) {
+            return html + (`
+            <div class="project fade">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/${githubUsername}/${project.name}/${project.default_branch}/assets/preview-img.png" alt="Preview Image">
+                    </div>
+                    <div class="project-content">
+                        <h3>${project.name.split('-').join(' ')}</h3>
+                        <p>${project.description}</p>
+                    </div>
+                    <div class="button-wrapper">
+                        <a href="/${project.name}" class="secondary-btn website-btn" target="_blank">
+                            <p>Website</p>
+                            <img src="./assets/web-icon.svg" alt="Website Icon">
+                        </a>
+                        <a href="${project.html_url}" class="primary-btn github-btn" target="_blank">
+                            <p>Github</p>
+                            <img src="./assets/github-icon.svg" alt="GitHub Icon">
+                        </a>
+                    </div>
+                </div>
+            `);
+
+        }, "");
+        console.log(filteredProjects);
     })
     .catch((error) => console.log(error));
 
@@ -101,9 +142,20 @@ let onScroll = function(){
     }
     checkScrollPos(scrollPos + _id('navbar').offsetHeight);
     handleScrollAnimation();
+    console.log('scroll')
 }
 
-window.addEventListener('scroll', onScroll);
+function throttle(fn, wait) {
+    let time = Date.now();
+    return function() {
+      if ((time + wait - Date.now()) < 0) {
+        fn();
+        time = Date.now();
+      }
+    }
+}
+
+window.addEventListener('scroll', throttle(onScroll,50));
 onScroll();
 
 scrollToView = function(id){
@@ -180,7 +232,6 @@ function distMetric(x,y,x2,y2) {
 class Item {
     constructor(element) {
         this.element = element; 
-        this.element.classList.add('fade');  
         this.element.addEventListener('mouseenter', (ev) => this.update(ev, 'in'));
         this.element.addEventListener('mouseleave', (ev) => this.update(ev, 'out'));
     }
@@ -201,7 +252,7 @@ let initializeItem = function(){
 }
 
 //Detect if dribbble shots has been loaded
-const observer = new MutationObserver((mutationRecords) => {
+const observer = new MutationObserver(() => {
     initializeItem();
 });
 

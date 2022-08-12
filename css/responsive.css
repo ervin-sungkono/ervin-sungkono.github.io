@@ -93,10 +93,6 @@
         bottom: 32%;
     }
 
-    #github-section .container #coming-soon > img{
-        width: 240px;
-    }
-
     #about-section .container .about-content{
         padding-inline: 1.5rem;
     }
@@ -149,20 +145,9 @@
         width: 48px;
     } 
 
-    #github-section .container #coming-soon{
-        width: 100%;
-        padding: 2rem 2rem;
-        flex-direction: column;
+    #github-section .container .github-projects .project .button-wrapper{
+        flex-wrap: nowrap;
     }
-
-    #github-section .container #coming-soon .content{
-        align-items: center;
-        text-align: center;
-    }
-
-    #github-section .container #coming-soon > img{
-        width: 100%;
-    } 
 }
 
 @media only screen and (max-width: 723px){
@@ -219,7 +204,6 @@
     }
 
     #hero-section .container .hero-content .cv-btn,
-    #github-section .container #coming-soon .content .github-btn,
     #dribbble-section .container .more-btn{
         padding: 0.75rem 1.5rem;
     }

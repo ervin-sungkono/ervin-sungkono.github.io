@@ -2,8 +2,8 @@ name: Generate sitemap
 
 on:
   push:
-    branches: [ staging ]
-    paths: [ '**.html', '**.pdf' ]
+    branches: ["master"]
+    paths: [ '**.html']
 
 jobs:
   sitemap_job:
@@ -17,9 +17,9 @@ jobs:
     
     - name: Generate the sitemap
       id: sitemap
-      uses: cicirello/generate-sitemap@v1
+      uses: cicirello/generate-sitemap@v1.8.0
       with:
-        base-url-path: https://www.cicirello.org/
+        base-url-path: https://ervin-sungkono.github.io/
     
     - name: Output stats
       run: |
@@ -36,7 +36,7 @@ jobs:
           the [generate-sitemap](https://github.com/cicirello/generate-sitemap) 
           GitHub action.  
         commit-message: "Automated sitemap update."
-        author: Vincent A. Cicirello <cicirello@users.noreply.github.com>
-        committer: Vincent A. Cicirello <cicirello@users.noreply.github.com>
+        author: Ervin Cahyadinata Sungkono
+        committer: Ervin Cahyadinata Sungkono
         branch: create-pull-request/sitemap
         delete-branch: true

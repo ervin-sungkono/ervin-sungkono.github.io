@@ -38,7 +38,7 @@ jobs:
           the [generate-sitemap](https://github.com/cicirello/generate-sitemap) 
           GitHub action.  
         commit-message: "Automated sitemap update."
-        author: Ervin Cahyadinata Sungkono
-        committer: Ervin Cahyadinata Sungkono
+        author: Ervin Cahyadinata Sungkono <ervin-sungkono@users.noreply.github.com>
+        committer: Ervin Cahyadinata Sungkono <ervin-sungkono@users.noreply.github.com>
         branch: create-pull-request/sitemap
         delete-branch: true

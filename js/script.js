@@ -64,7 +64,6 @@ fetch(`https://api.github.com/users/${githubUsername}/starred`)
             `);
 
         }, "");
-        console.log(filteredProjects);
     })
     .catch((error) => console.log(error));
 
@@ -142,7 +141,6 @@ let onScroll = function(){
     }
     checkScrollPos(scrollPos + _id('navbar').offsetHeight);
     handleScrollAnimation();
-    console.log('scroll')
 }
 
 function throttle(fn, wait) {

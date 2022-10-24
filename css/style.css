@@ -311,7 +311,7 @@ h1,h2,h3,a,p{
 #hero-section .container .hero-content{
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
     z-index: 2;
 }
 
@@ -465,10 +465,26 @@ h1,h2,h3,a,p{
     color: var(--black);
 }
 
-#about-section .container .about-content > p{
+#about-section .container .about-content p{
     text-align: center;
     font-size: var(--body-text-default);
     color: rgba(43, 43, 43, 0.8);
+}
+
+#about-section .container .about-content .about-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#about-section .container .about-content .about-description .section-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#about-section .container .about-content .about-description .section-wrapper a > img{
+    width: 240px;
 }
 
 #dribbble-section .container{

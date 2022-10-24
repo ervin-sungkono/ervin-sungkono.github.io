@@ -145,6 +145,10 @@
         width: 48px;
     } 
 
+    #about-section .container .about-content .about-description .section-wrapper > a{
+        display: none;
+    }
+
     #github-section .container .github-projects .project .button-wrapper{
         flex-wrap: nowrap;
     }

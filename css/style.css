@@ -683,6 +683,7 @@ h1,h2,h3,a,p{
     border-radius: 12px;
     object-fit: cover;
     box-shadow: 4px 10px 24px rgba(43, 43, 43, 0.15);
+    aspect-ratio: 16 / 10;
 }
 
 #github-section .container .github-projects .project .button-wrapper{

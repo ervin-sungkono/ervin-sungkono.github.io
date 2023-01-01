@@ -54,7 +54,7 @@ fetch(`https://api.github.com/users/${githubUsername}/starred`)
                         <p>${project.description}</p>
                     </div>
                     <div class="button-wrapper">
-                        <a href="/${project.name}" class="secondary-btn website-btn" target="_blank">
+                        <a href="${project.homepage}" class="secondary-btn website-btn" target="_blank">
                             <p>Website</p>
                             <img src="./assets/web-icon.svg" alt="Website Icon">
                         </a>

@@ -45,8 +45,8 @@ fetch(`https://api.github.com/users/${githubUsername}/starred`)
             <div class="project fade">
                     <div class="project-image">
                     <img 
-                        src="https://raw.githubusercontent.com/${githubUsername}/${project.name}/${project.default_branch}/assets/preview-img.png"
-                        onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/${githubUsername}/${project.name}/${project.default_branch}/src/assets/preview-img.png'"
+                        src="https://raw.githubusercontent.com/${githubUsername}/web-assets/master/images/${project.id}.png"
+                        onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/${githubUsername}/web-assets/master/images/no-image.png'"
                         alt="Preview Image">
                     </div>
                     <div class="project-content">
